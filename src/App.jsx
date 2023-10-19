@@ -3,27 +3,23 @@ import {Routes, Route, Link} from "react-router-dom"
 import Blue from './components/Blue'
 import Red from './components/Red'
 import Home from './components/Home'
+import Navbar from './components/navbar'
+import Footer from './components/Footer'
 
 function App() {
 
   return (
     <div id="container">
-      <div id="navbar">{
-        <div>
-          <Link to='/'>Home</Link>
-          <br/>
-          <Link to='/blue'>Blue</Link>
-          <br/>
-          <Link to='/red'>Red</Link>
-        </div>
-      }</div>
+      <Navbar/>
       <div id="main-section">
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/blue' element={<Blue />} />
           <Route path='/red' element={<Red />} />
+          <Route path='/asdf' element={<Home/>}/>
         </Routes>
       </div>
+      <Footer/>
     </div>
   )
 }
